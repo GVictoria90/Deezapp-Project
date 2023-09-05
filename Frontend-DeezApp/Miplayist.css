@@ -1,0 +1,55 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+    font-family: "https://bootswatch.com/5/cyborg/bootstrap.min.css";
+    background-color: black;;
+  }
+  
+  .container {
+    margin-top: 50px;
+  }
+  
+  /* Estilos para el formulario */
+  .form-label {
+    font-weight: bold;
+  }
+  
+  /* Estilos para las tarjetas de canción */
+  .card {
+    border: none;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+  
+  .btn-primary {
+    background-color:#e83283;
+    border-color: #e83283;
+  }
+  .form-control + .btn-primary {
+    border-radius: 25px;
+    background-color: #e83283;
+    border-color: #e83283;
+}
+  
+  /* Estilos para el reproductor de audio */
+  .audio-player {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para el footer */
+  footer {
+    color: #ffffff;
+    padding: none;
+  }
+  
+  /* Estilos adicionales según tus preferencias */
+ 

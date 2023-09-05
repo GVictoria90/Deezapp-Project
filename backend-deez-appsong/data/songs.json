@@ -1,0 +1,64 @@
+{
+  "Deezappsongs": [
+    {
+      "id": 1,
+      "title": "Do I Wanna Know",
+      "duration": 433,
+      "artist": "Artic Monkeys"
+    },
+    {
+      "id": 2,
+      "title": "Hail To The King",
+      "duration": 505,
+      "artist": "Avenged Sevenfold"
+    },
+    {
+      "id": 3,
+      "title": "Barbie Girl",
+      "duration": 322,
+      "artist": "Aqua"
+    },
+    {
+      "id": 4,
+      "title": "La Paura del Buio",
+      "duration": 326,
+      "artist": "Maneskin"
+    },
+    {
+      "id": 5,
+      "title": "Bones",
+      "duration": 245,
+      "artist": "Imagine Dragons"
+    },
+    {
+      "id": 6,
+      "title": "Nobody's Home",
+      "duration": 332,
+      "artist": "Avril Lavigne"
+    },
+    {
+      "id": 7,
+      "title": "Unsainted",
+      "duration": 446,
+      "artist": "Slipknot"
+    },
+    {
+      "id": 8,
+      "title": "Creep",
+      "duration": 356,
+      "artist": "RadioHead"
+    },
+    {
+      "id": 9,
+      "title": "Lost",
+      "duration": 318,
+      "artist": "Linkin Park"
+    },
+    {
+      "id": 10,
+      "title": "My Demons",
+      "duration": 349,
+      "artist": "Starset"
+    }
+  ]
+}

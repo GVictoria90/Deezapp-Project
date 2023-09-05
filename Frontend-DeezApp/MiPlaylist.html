@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="pngwing.com.png" title="Image from freepnglogos.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" href="./Miplayist.css">
+    <title>Mi Playlist</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Mi DeezApp</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="explorar.html">Explorar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="artista.html">Artista</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="album.html">Album</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="miplaylist.html">Mi Playlist</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <form class="d-flex">
+            <input id="searchInput" class="form-control me-2" type="search" placeholder="Buscar por título de canción o artista"
+                aria-label="Buscar">
+            <button id="searchButton" class="btn btn-primary" type="button" onclick="searchSongs()">Buscar</button>
+        </form>
+    </nav>
+
+    <div class="container" style="margin-top: 100px;">
+        <h1>Mi Playlist</h1>
+
+        <!-- Formulario para agregar canciones -->
+        <form id="addSongForm">
+            <div class="mb-3">
+                <label for="songTitle" class="form-label">Título de la canción</label>
+                <input type="text" class="form-control" id="songTitle" required>
+            </div>
+            <div class="mb-3">
+                <label for="songArtist" class="form-label">Artista de la canción</label>
+                <input type="text" class="form-control" id="songArtist" required>
+            </div>
+            <div class="mb-3">
+                <label for="songSource" class="form-label">Ruta de la canción</label>
+                <input type="text" class="form-control" id="songSource" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar canción</button>
+        </form>
+
+        <!-- Lista de pistas -->
+        <div class="row mt-4" id="playlist">
+            <!-- Las pistas se generan aquí -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center" style="margin-top: 100px;">
+            <p>&copy; 2023 DeezApp - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        const playlist = [
+            { title: "Barbie Girl", artist: "Aqua", source: "ruta-cancion-1.mp3" },
+            { title: "Get out Alive", artist: "Three Days Grace", source: "ruta-cancion-2.mp3" },
+            { title: "Lost", artist: "Linkin Park", source: "ruta-cancion-3.mp3" },
+            { title: "La Paura del Buio", artist: "Maneskin", source: "ruta-cancion-4.mp3" },
+            { title: "Bones", artist: "Imagine Dragons", source: "ruta-cancion-5.mp3" },
+            { title: "Unsainted", artist: "Slipknot", source: "ruta-cancion-6.mp3" },
+            { title: "Nobody's Home", artist: "Avril Lavigne", source: "ruta-cancion-7.mp3" },
+            { title: "Creep", artist: "RadioHead", source: "ruta-cancion-8.mp3" },
+            { title: "My Demons", artist: "Starset", source: "ruta-cancion-9.mp3" },
+            // Agrega más canciones aquí
+        ];
+
+        const playlistContainer = document.getElementById('playlist');
+        const addSongForm = document.getElementById('addSongForm');
+
+        function createSongCard(track) {
+            const trackCard = document.createElement('div');
+            trackCard.classList.add('col-md-6', 'mb-4');
+
+            trackCard.innerHTML = `
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">${track.title}</h5>
+                        <p class="card-text">Artista: ${track.artist}</p>
+                        <button class="btn btn-primary" data-src="${track.source}" onclick="playAudio(this)">
+                            Reproducir
+                        </button>
+                        <button class="btn btn-danger" onclick="deleteSong('${track.title}')">
+                            Eliminar
+                        </button>
+                        <audio class="audio-player" controls style="display: none;">
+                            <source src="${track.source}" type="audio/mpeg">
+                            Tu navegador no admite la reproducción de audio.
+                        </audio>
+                    </div>
+                </div>
+            `;
+
+            playlistContainer.appendChild(trackCard);
+        }
+
+        playlist.forEach(track => {
+            createSongCard(track);
+        });
+
+        function playAudio(button) {
+            // ... (código de la función playAudio)
+        }
+
+        function searchSongs() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const filteredPlaylist = playlist.filter(
+                track => track.title.toLowerCase().includes(searchInput) || track.artist.toLowerCase().includes(searchInput)
+            );
+
+            playlistContainer.innerHTML = '';
+
+            filteredPlaylist.forEach(track => {
+                createSongCard(track);
+            });
+        }
+
+        function deleteSong(title) {
+            const index = playlist.findIndex(track => track.title === title);
+            if (index !== -1) {
+                const confirmDelete = confirm(`¿Estás seguro de eliminar la canción "${title}"?`);
+                if (confirmDelete) {
+                    playlist.splice(index, 1);
+                    updatePlaylist();
+                }
+            }
+        }
+
+        function updatePlaylist() {
+            playlistContainer.innerHTML = '';
+            playlist.forEach(track => {
+                createSongCard(track);
+            });
+        }
+
+        addSongForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const songTitle = document.getElementById('songTitle').value;
+            const songArtist = document.getElementById('songArtist').value;
+            const songSource = document.getElementById('songSource').value;
+
+            const newTrack = { title: songTitle, artist: songArtist, source: songSource };
+            playlist.push(newTrack);
+
+            updatePlaylist();
+
+            // Limpiar el formulario
+            addSongForm.reset();
+        });
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+    /* Establece una altura fija para las imágenes del carrusel */
+    #artistCarousel .carousel-inner .carousel-item img {
+        height: 300px;
+        /* Establece la altura deseada para las imágenes */
+        width: auto;
+        /* Ajusta automáticamente el ancho en función de la altura */
+        object-fit: cover;
+        /* Escala y recorta la imagen para ajustarla a la altura */
+    }
+
+    /* Estilos para el cuerpo del sitio */
+    .body-1 {
+        font-family: 'https://bootswatch.com/5/cyborg/bootstrap.min.css';
+    }
+
+    /* Estilos para el encabezado de la navegación */
+    .navbar {
+        background-color: #1b1b1b;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+    }
+
+    .nav-link {
+        color: #ffffff;
+        font-size: 18px;
+    }
+
+    /* Estilos para el contenido principal */
+    .container.text-center {
+        margin-top: 100px;
+    }
+
+    .container.text-center img {
+        max-width: 400px;
+    }
+
+    .container.text-center h1 {
+
+        font-size: 36px;
+        margin-top: 20px;
+    }
+
+    .container.text-center p {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    /* Estilos para el pie de página */
+    footer {
+        color: #ffffff;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    /* Estilos para los enlaces */
+    a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }

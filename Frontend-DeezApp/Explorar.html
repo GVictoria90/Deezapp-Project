@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="pngwing.com.png" title="Image from freepnglogos.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" href="./Explorar.css">
+    <style>
+        /* Estilos personalizados aquí */
+    </style>
+    <title>Explorar</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Mi DeezApp</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="explorar.html">Explorar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="artista.html">Artista</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="album.html">Album</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="miplaylist.html">Mi Playlist</a>
+                    </li>
+                    <!-- ... Otras opciones de navegación ... -->
+                </ul>
+                <form class="d-flex">
+                    <input id="searchInput" class="form-control me-2" type="search"
+                    placeholder="Buscar por nombre de artista y canciones" aria-label="Buscar">
+                    <button class="btn btn-primary" type="button" onclick="searchContent()">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="margin-top: 100px;">
+        <h1>Explora Música Destacada</h1>
+        <p>Descubre artistas, canciones y álbumes que te encantarán.</p>
+
+        <!-- Tarjetas de contenido -->
+        <div class="row">
+         
+            <div class="col-md-4 mb-4">
+                <div class="card" data-name="Do I wanna Know?" data-artist="Arctic Monkeys">
+                    <img src="src/assets/imagesexplorar/Artic Monkeys.jpeg" class="card-img-top" alt="Canción 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Do I wanna Know?</h5>
+                        <p class="card-text">Artista: Artic Monkeys</p>
+                        <a href="#" class="btn btn-primary">Reproducir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" data-name="Hail to the King" data-artist="Avenged Sevenfold">
+                    <img src="src/assets/imagesexplorar/Avenged Sevenfold.jpeg" class="card-img-top" alt="Canción 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Hail to the King</h5>
+                        <p class="card-text">Artista: Avenged Sevenfold</p>
+                        <a href="#" class="btn btn-primary">Reproducir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" data-name="Hey Jude" data-artist="The Beatles">
+                    <img src="src/assets/imagesexplorar/El día que The Beatles conocieron a Elvis Presley.jpeg"
+                        class="card-img-top" alt="Canción 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Hey Jude</h5>
+                        <p class="card-text">Artista: The Beatles</p>
+                        <a href="#" class="btn btn-primary">Reproducir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" data-name="November Rain" data-artist="Guns N Roses">
+                    <img src="src/assets/imagesexplorar/Guns_N_Roses-Logo-PNG12.png" class="card-img-top"
+                        alt="Canción 4">
+                    <div class="card-body">
+                        <h5 class="card-title">November Rain</h5>
+                        <p class="card-text">Artista: Guns N Roses</p>
+                        <a href="#" class="btn btn-primary">Reproducir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" data-name="Under the Cover of Darkness" data-artist="The Strokes">
+                    <img src="src/assets/imagesexplorar/The strokes.jpeg" class="card-img-top" alt="Canción 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Under the Cover of Darkness</h5>
+                        <p class="card-text">Artista: The Strokes</p>
+                        <a href="#" class="btn btn-primary">Reproducir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" data-name="Smell Like Teen Spirit" data-artist="Nirvana">
+                    <img src="src/assets/imagesexplorar/nirvana.jpeg" class="card-img-top" alt="Canción 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Smell Like Teen Spirit</h5>
+                        <p class="card-text">Artista: Nirvana</p>
+                        <a href="#" class="btn btn-primary">Reproducir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" data-name="Half The World Away" data-artist="Oasis">
+                    <img src="src/assets/imagesexplorar/oasis.png" class="card-img-top" alt="Canción 7">
+                    <div class="card-body">
+                        <h5 class="card-title">Half The World Away</h5>
+                        <p class="card-text">Artista: Oasis</p>
+                        <a href="#" class="btn btn-primary">Reproducir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" data-name="The Wall" data-artist="Pink Floyd">
+                    <img src="src/assets/imagesexplorar/Pink_Floyd_(8).png" class="card-img-top" alt="Canción 8">
+                    <div class="card-body">
+                        <h5 class="card-title">The Wall</h5>
+                        <p class="card-text">Artista: Pink Floyd</p>
+                        <a href="#" class="btn btn-primary">Reproducir</a>
+                    </div>
+                </div>
+            </div>
+            <!-- ... Otras tarjetas ... -->
+            <div class="col-md-4 mb-4">
+                <div class="card" data-name="Bohemian Rhapsody" data-artist="Queen">
+                    <img src="src/assets/imagesexplorar/Queen-Logo-PNG10.png" class="card-img-top" alt="Canción 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Bohemian Rhapsody</h5>
+                        <p class="card-text">Artista: Queen</p>
+                        <a href="#" class="btn btn-primary">Reproducir</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Agregar las tarjetas faltantes aquí -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center" style="margin-top: 100px;">
+            <p>&copy; 2023 DeezApp - Todos los derechos reservados</p>
+        </div>
+    </footer>
+    <script>
+        function searchContent() {
+            const searchInput = document.getElementById('searchInput');
+            const searchTerm = searchInput.value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                const cardName = card.getAttribute('data-name').toLowerCase();
+                const artistName = card.getAttribute('data-artist').toLowerCase();
+                if (cardName.includes(searchTerm) || artistName.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

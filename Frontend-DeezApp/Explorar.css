@@ -1,0 +1,118 @@
+/* Estilos personalizados para la página de Explorar */
+
+.card-body {
+    height: 100%;
+}
+
+
+/* Estilos para el encabezado */
+.navbar {
+    margin-bottom: 30px;
+}
+
+/* Estilos para el título principal */
+.container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: "https://bootswatch.com/5/cyborg/bootstrap.min.css";
+}
+
+/* Estilos para la descripción */
+.container p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    font-family: "https://bootswatch.com/5/cyborg/bootstrap.min.css";
+}
+
+/* Estilos para las tarjetas de canciones */
+.card {
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: "https://bootswatch.com/5/quartz/bootstrap.min.css";
+}
+
+.card-text {
+    font-size: 16px;
+    color:  #f8f9fa;
+}
+
+.card-img-top {
+    max-height: 100px;
+    object-fit: cover;
+}
+
+/* Estilos para el botón Reproducir */
+.btn-primary {
+    background-color: #e83283;
+    border-color: #e83283;
+   
+}
+
+.btn-primary:hover {
+    background-color: #e83283;
+    border-color: #e83283;
+}
+
+
+footer p {
+    font-size: 14px;
+    color: #f8f9fa;
+}
+
+/* Estilos para el formulario de búsqueda */
+#searchInput {
+    border-radius: 25px;
+}
+
+/* Estilos para el botón de búsqueda */
+.form-control + .btn-primary {
+    border-radius: 25px;
+    background-color: #e83283;
+    border-color: #e83283;
+}
+
+/* Ajustar márgenes para dispositivos pequeños */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 50px;
+    }
+}
+
+/* Estilo personalizado para las tarjetas de los artistas */
+.artist-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.artist-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.artist-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.artist-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.artist-image {
+    max-width: 100%;
+    height: auto;
+}

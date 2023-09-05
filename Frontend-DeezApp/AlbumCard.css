@@ -1,0 +1,59 @@
+/* AlbumCard.css */
+.container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: "https://bootswatch.com/5/cyborg/bootstrap.min.css";
+ 
+}
+
+.card {
+    border: none;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-img-top {
+    min-height: 100px;
+    height: max-content;
+  }
+  
+  .card-body {
+    padding: 1rem;
+    font-family: 'https://bootswatch.com/5/cyborg/bootstrap.min.css';
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-family: 'https://bootswatch.com/5/cyborg/bootstrap.min.css';
+    color:#f8f9fa
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #f8f9fa;
+    font-family: 'https://bootswatch.com/5/quartz/bootstrap.min.css';
+  }
+  
+
+  footer p {
+    font-size: 14px;
+    color: #f8f9fa;
+}
+
+  .btn-primary {
+    background-color:#e83283;
+    border-color:#e83283;
+  }
+  
+  .form-control + .btn-primary {
+    border-radius: 25px;
+    background-color: #e83283;
+    border-color: #e83283;
+}
+  
+  /* Estilos adicionales según tus preferencias */
+  
